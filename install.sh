@@ -19,4 +19,4 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 
 sudo apt-get update && sudo apt-get install -y htop i3 vim feh git tmux meld discord signal-desktop spotify-client steam
 
-cp -rv .config/ .fonts/ .vimrc $HOME
+cp -rv .atom/ .config/ .fonts/ .vimrc $HOME
