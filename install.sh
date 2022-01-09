@@ -17,7 +17,14 @@ sudo apt-get install -y curl
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt-get update && sudo apt-get install -y htop vim git tmux meld discord signal-desktop spotify-client steam
-sudo apt-get install -y i3 i3blocks feh playerctl
+sudo apt-get update && sudo apt-get install -y htop vim git tmux meld discord signal-desktop spotify-client steam make gcc
+sudo apt-get install -y i3 i3blocks feh playerctl lm-sensors
+
+# i3blocks scritps
+git clone https://github.com/vivien/i3blocks-contrib.git
+sudo cp mediaplayer/mediaplayer /usr/share/i3blocks
+suco cp volume-pulseaudio/volume-pulseaudio /usr/share/i3blocks/
+rm -rf i3blocks-contrib
+
 
 cp -rv .atom/ .config/ .fonts/ .vimrc $HOME
