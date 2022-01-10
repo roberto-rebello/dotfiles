@@ -50,3 +50,5 @@ cp -rv .atom/ .config/ .fonts/ .vimrc $HOME
 
 betterlockscreen -u ~/.config/i3/wallpaper.jpg
 
+cp reboot_to_windows $HOME/.local/bin/
+
