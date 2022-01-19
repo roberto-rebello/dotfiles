@@ -201,6 +201,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+bindsym --release Print exec scrot --select /tmp/`date +%Y-%m-%d_%H-%M-%S`.png --exec "xclip -selection clipboard -target image/png -in /tmp/`date +%Y-%m-%d_%H-%M-%S`.png"
+bindsym $mod+Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H-%M-%S`.png 
+
 exec setxkbmap -model abnt2 -layout br -variant abnt2 -option deadkeys
 exec_always feh --bg-scale /home/rrebello/.config/i3/wallpaper.jpg
 
